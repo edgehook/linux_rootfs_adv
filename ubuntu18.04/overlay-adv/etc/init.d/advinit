@@ -21,7 +21,7 @@ start)
     fi
 
     # for uart RS232 or RS485 mode
-    cp210x_232_485
+    #cp210x_232_485
 
     # down and up eth0
     ifconfig eth0 down
