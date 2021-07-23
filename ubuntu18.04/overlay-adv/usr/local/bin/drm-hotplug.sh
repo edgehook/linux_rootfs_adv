@@ -39,12 +39,12 @@ MONITORS=$(sudo -u $user xrandr|grep -w connected|cut -d' ' -f1)
 # Make sure every connected monitors been enabled with a valid mode.
 for monitor in $MONITORS;do
     # Unlike the drm driver, X11 modesetting drv uses HDMI for HDMI-A
-    CRTC=$(echo $monitor|sed "s/HDMI\(-[^B]\)/HDMI-A\1/")
+    # CRTC=$(echo $monitor|sed "s/HDMI\(-[^B]\)/HDMI-A\1/")
 
-    SYS="/sys/class/drm/card*-$CRTC/"
+    #SYS="/sys/class/drm/card*-$CRTC/"
 
     # Already got a valid mode
-    grep -w "$(cat $SYS/mode)" $SYS/modes && continue
+    #grep -w "$(cat $SYS/mode)" $SYS/modes && continue
 
     # Ether disabled or wrongly configured
     sudo -u $user xrandr --output $monitor --auto
