@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb", ACTION=="add" ATTRS{idVendor}=="2c7c", ATTRS{idProduct}=="0800", RUN+="/usr/bin/adv-mmscan-hook.sh"
+

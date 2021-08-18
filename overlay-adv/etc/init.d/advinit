@@ -21,7 +21,7 @@ start)
     fi
 
     # for uart RS232 or RS485 mode
-    cp210x_232_485
+    #cp210x_232_485
 
     # for can f81601
     insmod /system/lib/modules/f81601.ko enable_mem_access=1
