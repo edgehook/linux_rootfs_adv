@@ -85,6 +85,9 @@ apt-get install -y logrotate
 dpkg -i  /packages/docker/*.deb
 apt-get install -f -y
 
+#for LXRandR
+dpkg -i /packages/LXRandR/lxrandr_0.3.2-1+b1_arm64.deb
+
 #for dotnet
 # .netcore
 # sudo mkdir -p /usr/local/dotnet
