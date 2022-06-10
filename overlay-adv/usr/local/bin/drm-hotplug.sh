@@ -49,5 +49,5 @@ for monitor in $MONITORS;do
     # Ether disabled or wrongly configured
     sudo -u $user xrandr --output $monitor --auto
 done
-
+systemctl restart lightdm
 exit 0
