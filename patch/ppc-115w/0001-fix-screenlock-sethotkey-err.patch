@@ -1,0 +1,29 @@
+From a0e3f833c760ea85f4dada67a34c137b8501688a Mon Sep 17 00:00:00 2001
+From: "ning.pan" <ning.pan@advantech.com.cn>
+Date: Thu, 21 Apr 2022 11:47:36 +0800
+Subject: [PATCH 1/2] fix screenlock & sethotkey err
+
+---
+ mk-adv.sh | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/mk-adv.sh b/mk-adv.sh
+index 9245a30..d741b28 100755
+--- a/mk-adv.sh
++++ b/mk-adv.sh
+@@ -85,6 +85,12 @@ apt-get install -y logrotate
+ dpkg -i  /packages/docker/*.deb
+ apt-get install -f -y
+ 
++#for screenlock
++apt-get install -y lxlock
++
++#for sethotkey
++apt-get install -y lxhotkey-plugin-openbox
++
+ #for dotnet
+ # .netcore
+ # sudo mkdir -p /usr/local/dotnet
+-- 
+2.17.1
+
